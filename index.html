@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shilpkala Fashions - Premium Indian Sarees</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #D4AF37;
+            --secondary: #FDF5E6;
+            --accent: #FFB6C1;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-swiper {
+            height: 80vh;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .sticky-cart {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .sticky-cart {
+                display: block;
+            }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-[#D4AF37]">Shilpkala</a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-[#D4AF37]">New Arrivals</a>
+                <a href="#" class="hover:text-[#D4AF37]">Collections</a>
+                <a href="#" class="hover:text-[#D4AF37]">Occasions</a>
+                <a href="#" class="hover:text-[#D4AF37]">About</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="hover:text-[#D4AF37]">
+                    <i class="bi bi-search text-xl"></i>
+                </button>
+                <button class="hover:text-[#D4AF37]">
+                    <i class="bi bi-heart text-xl"></i>
+                </button>
+                <button class="hover:text-[#D4AF37]">
+                    <i class="bi bi-bag text-xl"></i>
+                </button>
+                <button class="md:hidden">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="swiper hero-swiper mt-16">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide relative">
+                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80" 
+                     alt="Summer Collection" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <h1 class="text-5xl md:text-7xl mb-4">Summer Elegance Collection 2025</h1>
+                        <button class="bg-[#D4AF37] text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition">
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Trending Collections -->
+    <section class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl md:text-4xl text-center mb-12">Trending Collections</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="product-card group">
+                <div class="relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&q=80" 
+                         alt="Saree" class="w-full h-96 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black text-white opacity-0 group-hover:opacity-100 transition">
+                        <p class="text-lg font-semibold">Banarasi Silk Saree</p>
+                        <p>₹12,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more product cards -->
+        </div>
+    </section>
+
+    <!-- Trust Elements -->
+    <section class="bg-[#FDF5E6] py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <i class="bi bi-truck text-4xl text-[#D4AF37]"></i>
+                    <h3 class="mt-4 text-xl">Free Shipping</h3>
+                    <p class="mt-2 text-gray-600">On all orders above ₹999</p>
+                </div>
+                <div>
+                    <i class="bi bi-shield-check text-4xl text-[#D4AF37]"></i>
+                    <h3 class="mt-4 text-xl">100% Authentic</h3>
+                    <p class="mt-2 text-gray-600">Handpicked premium sarees</p>
+                </div>
+                <div>
+                    <i class="bi bi-arrow-counterclockwise text-4xl text-[#D4AF37]"></i>
+                    <h3 class="mt-4 text-xl">Easy Returns</h3>
+                    <p class="mt-2 text-gray-600">10-day return policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float bg-green-500 text-white p-4 rounded-full hover:bg-green-600">
+        <i class="bi bi-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Sticky Cart (Mobile) -->
+    <div class="sticky-cart bg-white border-t p-4">
+        <button class="w-full bg-[#D4AF37] text-white py-3 rounded-full">
+            Add to Cart
+        </button>
+    </div>
+
+    <script>
+        // Initialize Swiper
+        new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            }
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('.product-card').forEach((el) => observer.observe(el));
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
